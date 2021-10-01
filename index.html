@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="card.css">
+        <title>Pokemon Card</title>
+    </head>
+    <body>
+
+        <div id="card">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+
+        <script type="text/javascript">
+        const card = document.getElementById("card");
+            document.onmousemove = function (e){
+                card.style.transform = `rotateY(${e.clientX/2}deg) rotateX(${e.clientY/2}deg)`;     // change rotation speed with /number ex (/2, /5, or /10)
+            }
+        </script>
+
+    </body>
+</html>
